@@ -1,7 +1,7 @@
 # systemd system extensions (sysext) in elemental
 
 This document covers what system extension (a.k.a. sysext) is, why it's relevant for elemental, and how elemental 
-uses it to provide extensibility in Elemental OS image.
+uses it to provide extensibility in the immutable OS image.
 
 ## What is a system extension?
 
@@ -50,7 +50,7 @@ Think of `elemental3ctl` as a Linux-only tool in the sense that it helps do oper
 `elemental3` complements it by building and configuring an OS image that could have additional artifacts and 
 capabilities that could make it a platform to build and deploy cloud native applications upon.
 
-The `elemental3ctl` binary is installed on the Elemental OS as a system extension. Another system extension 
+The `elemental3ctl` binary is installed on the immutable OS as a system extension. Another system extension
 installed out of the box is RKE2, thus making the OS a perfect environment to develop and deploy Kubernetes 
 applications on.
 
