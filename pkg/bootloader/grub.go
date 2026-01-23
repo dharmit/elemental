@@ -123,6 +123,11 @@ func (g *Grub) InstallLive(rootPath, target, kernelCmdLine string) error {
 
 // Install installs the bootloader to the specified root.
 func (g *Grub) Install(rootPath, espDir, espLabel, entryID, kernelCmdline, recKernelCmdline string) error {
+	g.s.Logger().Info("==============================================================")
+	g.s.Logger().Info(kernelCmdline)
+	g.s.Logger().Info(recKernelCmdline)
+	g.s.Logger().Info("==============================================================")
+
 	err := g.installElementalEFI(rootPath, espDir, espLabel)
 	if err != nil {
 		return fmt.Errorf("installing elemental EFI apps: %w", err)
